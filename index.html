@@ -1,274 +1,157 @@
 <!DOCTYPE html>
-
 <html lang="ar" dir="rtl">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>مركز الفلسطيني للرقية الشرعية والحجامة</title>
-
     <style>
-
         :root {
-
             --primary: #2d5a27; /* أخضر إسلامي */
-
             --gold: #c5a059;    /* ذهبي */
-
             --light: #fdfaf5;   /* بيج هادئ */
-
             --text: #333;
-
             --price: #d35400;   /* لون السعر */
-
         }
-
 
         body {
-
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
             background-color: var(--light);
-
             color: var(--text);
-
             margin: 0;
-
             padding-bottom: 50px;
-
         }
-
 
         header {
-
             background: var(--primary);
-
             color: white;
-
             text-align: center;
-
             padding: 40px 20px;
-
             border-bottom: 5px solid var(--gold);
-
         }
 
-
         .hero-title { margin: 0; font-size: 1.6rem; line-height: 1.4; }
-
         .hero-sub { font-size: 1rem; opacity: 0.9; margin-top: 10px; }
-
 
         .container { padding: 20px; max-width: 600px; margin: auto; }
 
-
         .service-card {
-
             background: white;
-
             border-radius: 15px;
-
             padding: 20px;
-
             margin-bottom: 15px;
-
             border-right: 6px solid var(--gold);
-
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-
             position: relative;
-
         }
-
 
         .service-card h3 { color: var(--primary); margin: 0 0 10px 0; font-size: 1.2rem; }
-
         .service-card p { margin: 0; font-size: 0.95rem; color: #666; line-height: 1.5; }
-
         
-
         .price-tag {
-
             display: inline-block;
-
             margin-top: 10px;
-
             font-weight: bold;
-
             color: var(--price);
-
             background: #fff5ee;
-
             padding: 5px 12px;
-
             border-radius: 8px;
-
             border: 1px solid #ffe4d3;
-
         }
-
 
         .btn-order {
-
             display: block;
-
             width: 100%;
-
             background: var(--primary);
-
             color: white;
-
             text-align: center;
-
             padding: 12px;
-
             border-radius: 10px;
-
             text-decoration: none;
-
             font-weight: bold;
-
             margin-top: 15px;
-
             font-size: 1rem;
-
             transition: 0.3s;
-
         }
-
 
         .btn-order:hover { background: #1e3d1a; }
 
-
+        /* قسم العنوان التفاعلي */
         .location-section {
-
             background: #fff;
-
             border-radius: 15px;
-
             padding: 20px;
-
             margin-top: 30px;
-
             border: 1px solid #ddd;
-
             text-align: center;
-
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-
+            transition: 0.3s;
+            cursor: pointer;
+            text-decoration: none; /* لإزالة الخط تحت الرابط */
+            display: block;
         }
-
+        .location-section:hover {
+            border-color: var(--gold);
+            background: #fdfdfd;
+        }
         .location-section h4 { color: var(--primary); margin-top: 0; margin-bottom: 10px; }
-
-        .address-text { font-size: 0.95rem; color: #555; line-height: 1.6; }
-
+        .address-text { font-size: 0.95rem; color: #555; line-height: 1.6; margin-bottom: 10px; }
+        .map-hint { font-size: 0.8rem; color: var(--gold); font-weight: bold; }
 
         footer {
-
             text-align: center;
-
             padding: 30px;
-
             font-size: 0.9rem;
-
             color: #777;
-
             border-top: 1px solid #ddd;
-
             margin-top: 20px;
-
         }
-
         .dev-name { color: var(--primary); font-weight: bold; text-decoration: none; }
-
     </style>
-
 </head>
-
 <body>
 
-
 <header>
-
     <h1 class="hero-title">مركز الفلسطيني للرقية الشرعية والحجامة النبوية 🌿</h1>
-
     <p class="hero-sub">بإشراف متخصصين.. شفاء وطمأنينة بإذن الله</p>
-
 </header>
 
-
 <div class="container">
-
     
-
     <div class="service-card">
-
         <h3>📱 رقية شرعية (عبر الواتساب)</h3>
-
         <p>جلسة رقية شرعية كاملة ومتابعة دقيقة عن بُعد عبر اتصال الواتساب.</p>
-
         <span class="price-tag">السعر: 500 أوقية جديدة</span>
-
         <a href="https://wa.me/22242551979?text=السلام عليكم، أرغب بحجز جلسة رقية عبر الواتساب" class="btn-order">احجز الآن</a>
-
     </div>
 
-
     <div class="service-card">
-
         <h3>مقر المركز 🏠 رقية شرعية (في المركز)</h3>
-
         <p>حضور شخصي لجلسة الرقية الشرعية في مقر المركز ببيئة هادئة ومريحة.</p>
-
         <span class="price-tag">السعر: 500 أوقية جديدة</span>
-
         <a href="https://wa.me/22242551979?text=السلام عليكم، أرغب بحجز موعد رقية في مقر المركز" class="btn-order">احجز موعداً</a>
-
     </div>
-
 
     <div class="service-card">
-
         <h3>🩸 الحجامة النبوية</h3>
-
         <p>جلسة حجامة وقائية أو علاجية بأدوات معقمة ذات استخدام واحد.</p>
-
         <span class="price-tag">السعر حسب المواضع</span>
-
         <a href="https://wa.me/22242551979?text=السلام عليكم، أرغب بالاستفسار عن جلسات الحجامة" class="btn-order">استفسر الآن</a>
-
     </div>
 
-
-    <div class="location-section">
-
-        <h4>📍 موقعنا (نوديبو)</h4>
-
+    <a href="https://www.google.com/maps/search/?api=1&query=كرفور+الخامسة+النقطة+الساخنة+نواذيبو+موريتانيا" target="_blank" class="location-section">
+        <h4>📍 موقعنا في نواذيبو</h4>
         <p class="address-text">
-
             موريتانيا - نواديبو <br>
-
             كرفور الخامسة - النقطة الساخنة <br>
-
             <strong>بجوار سوق الهواتف</strong>
-
         </p>
-
-    </div>
-
+        <div class="map-hint">اضغط هنا لفتح الموقع على الخريطة 🗺️</div>
+    </a>
 
     <footer>
-
         تم التطوير بواسطة المبرمج <a href="tel:+22242551979" class="dev-name">عدنان 🛠️</a>
-
     </footer>
-
 </div>
 
-
 </body>
-
-</html> 
+</html>
