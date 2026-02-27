@@ -42,20 +42,40 @@
             border-right: 6px solid var(--gold);
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
             position: relative;
+            display: flex;
+            flex-direction: column;
         }
 
-        .service-card h3 { color: var(--primary); margin: 0 0 10px 0; font-size: 1.2rem; }
-        .service-card p { margin: 0; font-size: 0.95rem; color: #666; line-height: 1.5; }
+        /* تنسيق العنوان والصورة بجانب بعض */
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .service-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid var(--gold);
+            object-fit: cover;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .service-card h3 { color: var(--primary); margin: 0; font-size: 1.1rem; flex: 1; }
+        .service-card p { margin: 10px 0; font-size: 0.95rem; color: #666; line-height: 1.5; }
         
         .price-tag {
             display: inline-block;
-            margin-top: 10px;
+            margin-top: 5px;
             font-weight: bold;
             color: var(--price);
             background: #fff5ee;
             padding: 5px 12px;
             border-radius: 8px;
             border: 1px solid #ffe4d3;
+            align-self: flex-start;
         }
 
         .btn-order {
@@ -71,9 +91,10 @@
             margin-top: 15px;
             font-size: 1rem;
             transition: 0.3s;
+            box-sizing: border-box;
         }
 
-        .btn-order:hover { background: #1e3d1a; }
+        .btn-order:hover { background: #1e3d1a; transform: translateY(-2px); }
 
         .location-section {
             background: #fff;
@@ -117,27 +138,35 @@
 <div class="container">
     
     <div class="service-card">
-        <h3>📱 رقية شرعية (عبر الواتساب)</h3>
+        <div class="card-header">
+            <img src="adnan11.jpeg" alt="الرقية الشرعية" class="service-img">
+            <h3>📱 رقية شرعية (عبر الواتساب)</h3>
+        </div>
         <p>جلسة رقية شرعية كاملة ومتابعة دقيقة عن بُعد عبر اتصال الواتساب.</p>
         <span class="price-tag">السعر: 500 أوقية جديدة</span>
         <a href="https://wa.me/22242551979?text=السلام عليكم، أرغب بحجز جلسة رقية عبر الواتساب" class="btn-order">احجز الآن</a>
     </div>
 
     <div class="service-card">
-        <h3>مقر المركز 🏠 رقية شرعية (في المركز)</h3>
+        <div class="card-header">
+            <img src="adnan11.jpeg" alt="الرقية الشرعية" class="service-img">
+            <h3>مقر المركز 🏠 رقية شرعية (في المركز)</h3>
+        </div>
         <p>حضور شخصي لجلسة الرقية الشرعية في مقر المركز ببيئة هادئة ومريحة.</p>
         <span class="price-tag">السعر: 500 أوقية جديدة</span>
         <a href="https://wa.me/22242551979?text=السلام عليكم، أرغب بحجز موعد رقية في مقر المركز" class="btn-order">احجز موعداً</a>
     </div>
 
     <div class="service-card">
-        <h3>🩸 الحجامة النبوية</h3>
+        <div class="card-header">
+            <h3>🩸 الحجامة النبوية</h3>
+        </div>
         <p>جلسة حجامة وقائية أو علاجية بأدوات معقمة ذات استخدام واحد.</p>
         <span class="price-tag">السعر حسب المواضع</span>
         <a href="https://wa.me/22242551979?text=السلام عليكم، أرغب بالاستفسار عن جلسات الحجامة" class="btn-order">استفسر الآن</a>
     </div>
 
-    <a href="https://maps.google.com/?cid=12703449338574403655&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="location-section">
+    <a href="https://www.google.com/maps/search/?api=1&query=مركز+الفلسطيني+للطب+للحجامة+والرقية+نواذيبو" target="_blank" class="location-section">
         <h4>📍 موقعنا في نواذيبو</h4>
         <p class="address-text">
             موريتانيا - نواديبو <br>
