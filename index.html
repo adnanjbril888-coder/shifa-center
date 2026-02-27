@@ -31,16 +31,15 @@
 
         .hero-title { margin: 0; font-size: 1.6rem; line-height: 1.4; }
 
-        /* تنسيق اسم الدكتور الجديد */
         .hero-sub { 
-            font-size: 1.4rem; /* خط أكبر */
-            color: var(--gold); /* لون ذهبي */
+            font-size: 1.4rem; 
+            color: var(--gold); 
             font-weight: bold;
             margin-top: 15px;
             display: inline-block;
             padding: 5px 20px;
             border-bottom: 2px solid var(--gold);
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3); /* ظل لبروز الخط */
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
         }
 
         .container { padding: 20px; max-width: 600px; margin: auto; }
@@ -106,14 +105,15 @@
 
         .btn-order:hover { background: #1e3d1a; transform: translateY(-2px); }
 
+        /* تعديلات قسم الموقع ليكون الخط أكبر وأوضح */
         .location-section {
             background: #fff;
             border-radius: 15px;
-            padding: 20px;
+            padding: 25px 20px; /* زيادة المساحة الداخلية */
             margin-top: 30px;
-            border: 1px solid #ddd;
+            border: 2px solid #ddd; /* زيادة سمك الإطار */
             text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
             transition: 0.3s;
             cursor: pointer;
             text-decoration: none; 
@@ -123,9 +123,30 @@
             border-color: var(--gold);
             background: #fdfdfd;
         }
-        .location-section h4 { color: var(--primary); margin-top: 0; margin-bottom: 10px; }
-        .address-text { font-size: 0.95rem; color: #555; line-height: 1.6; margin-bottom: 10px; }
-        .map-hint { font-size: 0.8rem; color: var(--gold); font-weight: bold; }
+        .location-section h4 { 
+            color: var(--primary); 
+            margin-top: 0; 
+            margin-bottom: 15px; 
+            font-size: 1.3rem; /* تكبير العنوان الرئيسي للموقع */
+        }
+        .address-text { 
+            font-size: 1.1rem; /* تكبير نص العنوان */
+            color: #444; 
+            line-height: 1.8; 
+            margin-bottom: 15px; 
+        }
+        .address-text strong {
+            color: var(--primary);
+            font-size: 1.2rem; /* تكبير مكان النقطة الساخنة */
+        }
+        .map-hint { 
+            font-size: 0.95rem; 
+            color: var(--gold); 
+            font-weight: bold; 
+            background: #f9f4ea;
+            padding: 8px;
+            border-radius: 5px;
+        }
 
         footer {
             text-align: center;
@@ -176,14 +197,14 @@
         <a href="https://wa.me/22242551979?text=السلام عليكم، أرغب بالاستفسار عن جلسات الحجامة" class="btn-order">استفسر الآن</a>
     </div>
 
-    <a href="https://maps.google.com/?cid=12703449338574403655&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="location-section">
+    <a href="https://www.google.com/maps/search/?api=1&query=مركز+الفلسطيني+للطب+للحجامة+والرقية+نواذيبو" target="_blank" class="location-section">
         <h4>📍 موقعنا في نواذيبو</h4>
         <p class="address-text">
-            موريتانيا - نواديبو <br>
-            كرفور الخامسة - النقطة الساخنة <br>
-            <strong>بجوار سوق الهواتف</strong>
+            موريتانيا - نواذيبو <br>
+            <strong>كرفور الخامسة - النقطة الساخنة</strong> <br>
+            بجوار سوق الهواتف
         </p>
-        <div class="map-hint">اضغط هنا لفتح موقع المركز على الخريطة 🗺️</div>
+        <div class="map-hint">اضغط هنا لفتح الموقع على الخريطة 🗺️</div>
     </a>
 
     <footer>
