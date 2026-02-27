@@ -128,6 +128,72 @@
         <span class="price-tag">السعر حسب المواضع</span>
         <a href="https://wa.me/22242551979?text=السلام عليكم، أرغب بالاستفسار عن جلسات الحجامة" class="btn-order">استفسر الآن</a>
     </div>
+    
+<div id="paymentModal" class="modal">
+    <div class="modal-content">
+        <h2 style="color: var(--dark);">تفاصيل الدفع</h2>
+        <div class="payment-info">رقم الدفع الموحد:<br><strong style="font-size: 1.6rem; color: #d35400;">48881186</strong></div>
+        <div class="alert-box">📢 <strong>تنبيه:</strong> يرجى إرسال <strong>لقطة شاشة</strong> للوصل عند فتح الواتساب لتأكيد طلبك.</div>
+        <p style="font-weight: bold;">اختر تطبيق التحويل:</p>
+        <button class="payment-option" style="background: #03a9f4; color: white;" onclick="finalizeOrder('بنكيلي')">بنكيلي 💳</button>
+        <button class="payment-option" style="background: #4caf50; color: white;" onclick="finalizeOrder('مصرفي')">مصرفي 🏦</button>
+        <button class="payment-option" style="background: #ff9800; color: white;" onclick="finalizeOrder('سداد')">سداد 📱</button>
+        <button style="background:none; border:none; color:#666; cursor:pointer; margin-top:15px; text-decoration: underline;" onclick="closePaymentModal()">إلغاء</button>
+    </div>
+</div>
+
+<script>
+    let basket = {}; 
+    const adminPhone = "22234858800";
+
+    function updateQty(id, price, change) {
+        if (!basket[id]) basket[id] = { p: price, q: 0 };
+        basket[id].q += change;
+        if (basket[id].q < 0) basket[id].q = 0;
+        
+        document.getElementById('qty-'+id).innerText = basket[id].q;
+        refreshBar();
+    }
+
+    function refreshBar() {
+        let total = 0, count = 0;
+        for (let k in basket) {
+            total += basket[k].q * basket[k].p;
+            count += basket[k].q;
+        }
+        const bar = document.getElementById('cart-bar');
+        if (count > 0) {
+            bar.style.display = 'block';
+            document.getElementById('total-price').innerText = total;
+        } else {
+            bar.style.display = 'none';
+        }
+    }
+
+    function openPaymentModal() { document.getElementById('paymentModal').style.display = 'block'; }
+    function closePaymentModal() { document.getElementById('paymentModal').style.display = 'none'; }
+
+    function finalizeOrder(method) {
+        let message = "طلبية جديدة من مطعم العربي:\n--------------------------\n";
+        let hasItems = false;
+        for (let k in basket) {
+            if (basket[k].q > 0) {
+                message += `- ${k}: (${basket[k].q}) حبة\n`;
+                hasItems = true;
+            }
+        }
+        if(!hasItems) return alert("الرجاء اختيار وجبة أولاً");
+        
+        message += "--------------------------\n";
+        message += "💰 الإجمالي: " + document.getElementById('total-price').innerText + " أوقية جديدة\n";
+        message += "💳 دفع عبر: " + method + "\n";
+        message += "📞 تم التحويل للرقم: 48881186\n\n📸 سأرسل لك صورة التحويل الآن..";
+        window.location.href = `https://wa.me/${adminPhone}?text=${encodeURIComponent(message)}`;
+    }
+</script>
+
+</body>
+</html>
 
     <div class="location-section">
         <h4>📍 موقعنا (نوديبو)</h4>
