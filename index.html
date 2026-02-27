@@ -35,7 +35,6 @@
             justify-content: center;
         }
 
-        /* تنسيق شعار المركز */
         .header-logo {
             position: absolute;
             top: 5px; 
@@ -128,11 +127,53 @@
 
         .btn-order:hover { background: #1e3d1a; transform: translateY(-2px); }
 
+        /* تنسيق قسم الدفع الجديد */
+        .payment-section {
+            background: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 25px;
+            border: 2px dashed var(--gold);
+            text-align: center;
+        }
+        .payment-section h4 { color: var(--primary); margin-top: 0; margin-bottom: 15px; }
+        .payment-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .pay-item {
+            padding: 10px 5px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            color: white;
+        }
+        .bankily { background: #006837; }
+        .masrvi { background: #1b4e9b; }
+        .bim { background: #e30613; }
+        .sadad { background: #f7941d; }
+        .click { background: #2ab24b; }
+
+        .payment-number {
+            font-size: 1.4rem;
+            color: var(--price);
+            font-weight: bold;
+            letter-spacing: 1px;
+            background: #fef5f0;
+            padding: 10px;
+            border-radius: 10px;
+            display: block;
+            margin-top: 10px;
+            border: 1px solid #ffe4d3;
+        }
+
         .location-section {
             background: #fff;
             border-radius: 15px;
             padding: 25px 20px; 
-            margin-top: 30px;
+            margin-top: 20px;
             border: 2px solid #ddd; 
             text-align: center;
             box-shadow: 0 4px 15px rgba(0,0,0,0.08);
@@ -204,7 +245,7 @@
     <div class="service-card">
         <div class="card-header">
             <img src="adnan11.jpeg" alt="الرقية الشرعية" class="service-img">
-            <h3>مقر المركز 🏠 رقية شرعية (في المركز)</h3>
+            <h3>🏠 رقية شرعية (في المركز)</h3>
         </div>
         <p>حضور شخصي لجلسة الرقية الشرعية في مقر المركز ببيئة هادئة ومريحة.</p>
         <span class="price-tag">السعر: 500 أوقية جديدة</span>
@@ -231,34 +272,17 @@
         <a href="https://wa.me/22242551979?text=السلام عليكم، أرغب بالاستفسار عن جلسات الحجامة" class="btn-order">استفسر الآن</a>
     </div>
 
-    <div class="service-card">
-        <div class="card-header">
-            <img src="t.jpeg" alt="التدليك العلاجي" class="service-img">
-            <h3>💆‍♂️ التدليك العلاجي</h3>
+    <div class="payment-section">
+        <h4>💳 طرق الدفع المتاحة</h4>
+        <div class="payment-grid">
+            <div class="pay-item bankily">بنكيلي</div>
+            <div class="pay-item masrvi">مصرفي</div>
+            <div class="pay-item bim">بيم بنك</div>
+            <div class="pay-item sadad">سداد</div>
+            <div class="pay-item click" style="grid-column: span 2;">كليك</div>
         </div>
-        <p>جلسات تدليك متخصصة لعلاج آلام الظهر والمفاصل والعضلات.</p>
-        <span class="price-tag">خدمة متميزة</span>
-        <a href="https://wa.me/22242551979?text=السلام عليكم، أرغب بحجز جلسة تدليك علاجي" class="btn-order">احجز موعداً</a>
-    </div>
-
-    <div class="service-card">
-        <div class="card-header">
-            <img src="m.jpeg" alt="المساج الاسترخائي" class="service-img">
-            <h3>✨ المساج الاسترخائي</h3>
-        </div>
-        <p>تخلص من التوتر والضغط النفسي بجلسة مساج تمنحك الراحة والهدوء.</p>
-        <span class="price-tag">راحة لا توصف</span>
-        <a href="https://wa.me/22242551979?text=السلام عليكم، أرغب بحجز جلسة مساج استرخائي" class="btn-order">احجز الآن</a>
-    </div>
-
-    <div class="service-card">
-        <div class="card-header">
-            <img src="a.jpeg" alt="الأعشاب الطبية" class="service-img">
-            <h3>🌿 قسم الأعشاب والزيوت</h3>
-        </div>
-        <p>تشكيلة مختارة من الأعشاب الطبيعية والزيوت النادرة للشفاء بإذن الله.</p>
-        <span class="price-tag">منتجات طبيعية 100%</span>
-        <a href="https://wa.me/22242551979?text=السلام عليكم، أرغب بالاستفسار عن الأعشاب والمنتجات المتوفرة" class="btn-order">استفسر الآن</a>
+        <small>الدفع على الرقم الموحد:</small>
+        <span class="payment-number">42551979</span>
     </div>
 
     <a href="https://maps.google.com/?cid=12703449338574403655&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="location-section">
