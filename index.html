@@ -6,12 +6,12 @@
     <title>مركز الفلسطيني للرقية الشرعية والحجامة</title>
     <style>
         :root {
-            --primary: #2d5a27; /* أخضر إسلامي */
-            --gold: #c5a059;    /* ذهبي */
-            --light: #fdfaf5;   /* بيج هادئ */
+            --primary: #2d5a27;
+            --gold: #c5a059;
+            --light: #fdfaf5;
             --text: #333;
-            --price: #d35400;   /* لون السعر */
-            --free: #27ae60;    /* لون كلمة مجاني */
+            --price: #d35400;
+            --free: #27ae60;
         }
 
         body {
@@ -127,7 +127,7 @@
 
         .btn-order:hover { background: #1e3d1a; transform: translateY(-2px); }
 
-        /* تنسيق قسم الدفع الجديد */
+        /* تنسيق قسم الدفع مع الصور */
         .payment-section {
             background: #fff;
             border-radius: 15px;
@@ -137,27 +137,38 @@
             text-align: center;
         }
         .payment-section h4 { color: var(--primary); margin-top: 0; margin-bottom: 15px; }
+        
         .payment-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+            gap: 12px;
             margin-bottom: 15px;
         }
+        
         .pay-item {
-            padding: 10px 5px;
-            border-radius: 8px;
-            font-size: 0.85rem;
-            font-weight: bold;
-            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
         }
-        .bankily { background: #006837; }
-        .masrvi { background: #1b4e9b; }
-        .bim { background: #e30613; }
-        .sadad { background: #f7941d; }
-        .click { background: #2ab24b; }
+        
+        .pay-item img {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            object-fit: cover;
+            border: 1px solid #eee;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .pay-item span {
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: #555;
+        }
 
         .payment-number {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             color: var(--price);
             font-weight: bold;
             letter-spacing: 1px;
@@ -242,44 +253,29 @@
         <a href="https://wa.me/22242551979?text=السلام عليكم دكتور جبريل، أرغب في الحصول على استشارة طبية" class="btn-order" style="background: var(--free);">ابدأ الاستشارة الآن</a>
     </div>
 
-    <div class="service-card">
-        <div class="card-header">
-            <img src="adnan11.jpeg" alt="الرقية الشرعية" class="service-img">
-            <h3>🏠 رقية شرعية (في المركز)</h3>
-        </div>
-        <p>حضور شخصي لجلسة الرقية الشرعية في مقر المركز ببيئة هادئة ومريحة.</p>
-        <span class="price-tag">السعر: 500 أوقية جديدة</span>
-        <a href="https://wa.me/22242551979?text=السلام عليكم، أرغب بحجز موعد رقية في مقر المركز" class="btn-order">احجز موعداً</a>
-    </div>
-
-    <div class="service-card">
-        <div class="card-header">
-            <img src="adnan11.jpeg" alt="الرقية الشرعية" class="service-img">
-            <h3>📱 رقية شرعية (عبر الواتساب)</h3>
-        </div>
-        <p>جلسة رقية شرعية كاملة ومتابعة دقيقة عن بُعد عبر اتصال الواتساب.</p>
-        <span class="price-tag">السعر: 500 أوقية جديدة</span>
-        <a href="https://wa.me/22242551979?text=السلام عليكم، أرغب بحجز جلسة رقية عبر الواتساب" class="btn-order">احجز الآن</a>
-    </div>
-
-    <div class="service-card">
-        <div class="card-header">
-            <img src="h.jpeg" alt="الحجامة النبوية" class="service-img">
-            <h3>🩸 الحجامة النبوية</h3>
-        </div>
-        <p>جلسة حجامة وقائية أو علاجية بأدوات معقمة ذات استخدام واحد.</p>
-        <span class="price-tag">السعر حسب المواضع</span>
-        <a href="https://wa.me/22242551979?text=السلام عليكم، أرغب بالاستفسار عن جلسات الحجامة" class="btn-order">استفسر الآن</a>
-    </div>
-
     <div class="payment-section">
         <h4>💳 طرق الدفع المتاحة</h4>
         <div class="payment-grid">
-            <div class="pay-item bankily">بنكيلي</div>
-            <div class="pay-item masrvi">مصرفي</div>
-            <div class="pay-item bim">بيم بنك</div>
-            <div class="pay-item sadad">سداد</div>
-            <div class="pay-item click" style="grid-column: span 2;">كليك</div>
+            <div class="pay-item">
+                <img src="b.jpeg" alt="بنكيلي">
+                <span>بنكيلي</span>
+            </div>
+            <div class="pay-item">
+                <img src="m.png" alt="مصرفي">
+                <span>مصرفي</span>
+            </div>
+            <div class="pay-item">
+                <img src="s.png" alt="سداد">
+                <span>سداد</span>
+            </div>
+            <div class="pay-item">
+                <img src="p.png" alt="بيم بنك">
+                <span>بيم بنك</span>
+            </div>
+            <div class="pay-item">
+                <img src="k.jpeg" alt="كليك">
+                <span>كليك</span>
+            </div>
         </div>
         <small>الدفع على الرقم الموحد:</small>
         <span class="payment-number">42551979</span>
