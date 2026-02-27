@@ -30,7 +30,18 @@
         }
 
         .hero-title { margin: 0; font-size: 1.6rem; line-height: 1.4; }
-        .hero-sub { font-size: 1rem; opacity: 0.9; margin-top: 10px; }
+
+        /* تنسيق اسم الدكتور الجديد */
+        .hero-sub { 
+            font-size: 1.4rem; /* خط أكبر */
+            color: var(--gold); /* لون ذهبي */
+            font-weight: bold;
+            margin-top: 15px;
+            display: inline-block;
+            padding: 5px 20px;
+            border-bottom: 2px solid var(--gold);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3); /* ظل لبروز الخط */
+        }
 
         .container { padding: 20px; max-width: 600px; margin: auto; }
 
@@ -46,7 +57,6 @@
             flex-direction: column;
         }
 
-        /* تنسيق العنوان والصورة بجانب بعض */
         .card-header {
             display: flex;
             align-items: center;
@@ -132,7 +142,7 @@
 
 <header>
     <h1 class="hero-title">مركز الفلسطيني للرقية الشرعية والحجامة النبوية 🌿</h1>
-    <p class="hero-sub">باشراف .د.جبريل الفلسطيني</p>
+    <div class="hero-sub">بإشراف د. جبريل الفلسطيني</div>
 </header>
 
 <div class="container">
@@ -166,7 +176,7 @@
         <a href="https://wa.me/22242551979?text=السلام عليكم، أرغب بالاستفسار عن جلسات الحجامة" class="btn-order">استفسر الآن</a>
     </div>
 
-    <a href="https://www.google.com/maps/search/?api=1&query=مركز+الفلسطيني+للطب+للحجامة+والرقية+نواذيبو" target="_blank" class="location-section">
+    <a href="https://maps.google.com/?cid=12703449338574403655&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="location-section">
         <h4>📍 موقعنا في نواذيبو</h4>
         <p class="address-text">
             موريتانيا - نواديبو <br>
