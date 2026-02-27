@@ -28,25 +28,25 @@
             text-align: center;
             padding: 40px 20px;
             border-bottom: 5px solid var(--gold);
-            position: relative; /* لتمكين تحديد موقع الشعار بدقة */
+            position: relative; 
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
         }
 
-        /* تنسيق شعار المركز الجديد */
+        /* تنسيق شعار المركز */
         .header-logo {
             position: absolute;
             top: 10px;
             right: 10px;
-            width: 60px; /* حجم مناسب للشعار */
-            height: auto;
-            border-radius: 10px; /* زوايا منحنية قليلاً */
-            /* يمكنك إضافة ظل خفيف إذا أردت: box-shadow: 0 2px 5px rgba(0,0,0,0.2); */
+            width: 65px; 
+            height: 65px;
+            border-radius: 10px;
+            object-fit: contain;
         }
 
-        .hero-title { margin: 0; font-size: 1.6rem; line-height: 1.4; margin-top: 20px; /* مسافة إضافية للعنوان بسبب الشعار */ }
+        .hero-title { margin: 0; font-size: 1.6rem; line-height: 1.4; margin-top: 20px; }
 
         .hero-sub { 
             font-size: 1.4rem; 
@@ -184,7 +184,7 @@
 <body>
 
 <header>
-    <img src="as.png" alt="شعار مركز الفلسطيني" class="header-logo">
+    <img src="as.jpeg" alt="شعار مركز الفلسطيني" class="header-logo">
     <h1 class="hero-title">مركز الفلسطيني للرقية الشرعية والحجامة النبوية 🌿</h1>
     <div class="hero-sub">بإشراف د. جبريل الفلسطيني</div>
 </header>
@@ -275,6 +275,5 @@
         تم التطوير بواسطة المبرمج <a href="tel:+22242551979" class="dev-name">عدنان 🛠️</a>
     </footer>
 </div>
-
 </body>
 </html>
