@@ -26,43 +26,37 @@
             background: var(--primary);
             color: white;
             text-align: center;
-            padding: 45px 20px; /* زيادة بسيطة في الحشو لاستيعاب الحجم الجديد */
+            padding: 45px 20px;
             border-bottom: 5px solid var(--gold);
             position: relative; 
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 120px; /* ضمان مساحة كافية للشعارات المكبرة */
+            min-height: 120px;
         }
 
-        /* تنسيق مشترك للشعارين بعد التكبير */
         .header-logo {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            width: 85px;  /* تم التكبير من 65px إلى 85px */
-            height: 85px; /* تم التكبير من 65px إلى 85px */
+            width: 85px; 
+            height: 85px; 
             border-radius: 12px;
             object-fit: contain;
             background-color: rgba(255,255,255,0.15); 
             padding: 2px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* إضافة ظل خفيف لإبراز الحجم */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
 
-        .logo-right {
-            right: 15px;
-        }
-
-        .logo-left {
-            left: 15px;
-        }
+        .logo-right { right: 15px; }
+        .logo-left { left: 15px; }
 
         .hero-title { 
             margin: 0; 
             font-size: 1.5rem; 
             line-height: 1.4; 
-            max-width: 55%; /* تضييق المساحة قليلاً لتجنب الشعارات الكبيرة */
+            max-width: 55%; 
         }
 
         .hero-sub { 
@@ -153,7 +147,6 @@
             border: 2px dashed var(--gold);
             text-align: center;
         }
-        .payment-section h4 { color: var(--primary); margin-top: 0; margin-bottom: 15px; }
         
         .payment-grid {
             display: grid;
@@ -176,18 +169,11 @@
             object-fit: cover;
             border: 1px solid #eee;
         }
-        
-        .pay-item span {
-            font-size: 0.8rem;
-            font-weight: bold;
-            color: #555;
-        }
 
         .payment-number {
             font-size: 1.5rem;
             color: var(--price);
             font-weight: bold;
-            letter-spacing: 1px;
             background: #fef5f0;
             padding: 10px;
             border-radius: 10px;
@@ -206,19 +192,24 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.08);
             text-decoration: none; 
             display: block;
+            transition: 0.3s;
         }
+
+        .location-section:hover {
+            border-color: var(--gold);
+            transform: scale(1.02);
+        }
+
         .location-section h4 { color: var(--primary); margin-bottom: 15px; font-size: 1.3rem; }
         .address-text { font-size: 1.1rem; color: #444; line-height: 1.8; }
-        .map-hint { font-size: 0.95rem; color: var(--gold); font-weight: bold; background: #f9f4ea; padding: 8px; border-radius: 5px; }
+        .map-hint { font-size: 0.95rem; color: var(--gold); font-weight: bold; background: #f9f4ea; padding: 8px; border-radius: 5px; display: block; margin-top: 10px; }
 
         footer { text-align: center; padding: 30px; font-size: 0.9rem; color: #777; border-top: 1px solid #ddd; margin-top: 20px; }
         .dev-name { color: var(--primary); font-weight: bold; text-decoration: none; }
 
-        /* تكييف الهيدر للشاشات الصغيرة */
         @media (max-width: 480px) {
-            .header-logo { width: 65px; height: 65px; } /* العودة للحجم السابق في الجوال لتجنب الزحام */
+            .header-logo { width: 65px; height: 65px; }
             .hero-title { font-size: 1.1rem; max-width: 60%; }
-            .hero-sub { font-size: 1rem; }
             header { padding: 30px 10px; }
         }
     </style>
@@ -226,9 +217,8 @@
 <body>
 
 <header>
-    <img src="as.jpeg" alt="شعار مركز الفلسطيني يمين" class="header-logo logo-right">
-    <img src="ass.jpeg" alt="شعار مركز الفلسطيني يسار" class="header-logo logo-left">
-    
+    <img src="as.jpeg" alt="شعار" class="header-logo logo-right">
+    <img src="ass.jpeg" alt="شعار" class="header-logo logo-left">
     <h1 class="hero-title">مركز الفلسطيني للرقية الشرعية والحجامة النبوية 🌿</h1>
     <div class="hero-sub">بإشراف د. جبريل الفلسطيني</div>
 </header>
@@ -247,7 +237,7 @@
 
     <div class="service-card">
         <div class="card-header">
-            <img src="adnan11.jpeg" alt="الرقية الشرعية" class="service-img">
+            <img src="adnan11.jpeg" alt="الرقية" class="service-img">
             <h3>🏠 رقية شرعية (في المركز)</h3>
         </div>
         <p>حضور شخصي لجلسة الرقية الشرعية في مقر المركز ببيئة هادئة ومريحة.</p>
@@ -257,17 +247,7 @@
 
     <div class="service-card">
         <div class="card-header">
-            <img src="adnan11.jpeg" alt="الرقية الشرعية" class="service-img">
-            <h3>📱 رقية شرعية (عبر الواتساب)</h3>
-        </div>
-        <p>جلسة رقية شرعية كاملة ومتابعة دقيقة عن بُعد عبر اتصال الواتساب.</p>
-        <span class="price-tag">السعر: 500 أوقية جديدة</span>
-        <a href="https://wa.me/22242551979?text=السلام عليكم، أرغب بحجز جلسة رقية عبر الواتساب" class="btn-order">احجز الآن</a>
-    </div>
-
-    <div class="service-card">
-        <div class="card-header">
-            <img src="h.jpeg" alt="الحجامة النبوية" class="service-img">
+            <img src="h.jpeg" alt="الحجامة" class="service-img">
             <h3>🩸 الحجامة النبوية</h3>
         </div>
         <p>جلسة حجامة وقائية أو علاجية بأدوات معقمة ذات استخدام واحد.</p>
@@ -275,74 +255,27 @@
         <a href="https://wa.me/22242551979?text=السلام عليكم، أرغب بالاستفسار عن جلسات الحجامة" class="btn-order">احجز الان</a>
     </div>
 
-    <div class="service-card">
-        <div class="card-header">
-            <img src="t.jpeg" alt="التدليك العلاجي" class="service-img">
-            <h3>💆‍♂️ التدليك العلاجي</h3>
-        </div>
-        <p>جلسات تدليك متخصصة لعلاج آلام الظهر والمفاصل والعضلات.</p>
-        <span class="price-tag"> السعر حسب الجلسة</span>
-        <a href="https://wa.me/22242551979?text=السلام عليكم، أرغب بحجز جلسة تدليك علاجي" class="btn-order">احجز موعداً</a>
-    </div>
-
-    <div class="service-card">
-        <div class="card-header">
-            <img src="m.jpeg" alt="المساج الاسترخائي" class="service-img">
-            <h3>✨ المساج الاسترخائي</h3>
-        </div>
-        <p>تخلص من التوتر والضغط النفسي بجلسة مساج تمنحك الراحة والهدوء.</p>
-    <span class="price-tag">السعر حسب الجلسة</span>
-        <a href="https://wa.me/22242551979?text=السلام عليكم، أرغب بحجز جلسة مساج استرخائي" class="btn-order">احجز الآن</a>
-    </div>
-
-    <div class="service-card">
-        <div class="card-header">
-            <img src="a.jpeg" alt="الأعشاب الطبية" class="service-img">
-            <h3>🌿 قسم الأعشاب والزيوت</h3>
-        </div>
-        <p>تشكيلة مختارة من الأعشاب الطبيعية والزيوت النادرة للشفاء بإذن الله.</p>
-        <span class="price-tag">منتجات طبيعية 100%</span>
-        <span class="price-tag">السعر حسب الطلب</span>
-
-        <a href="https://wa.me/22242551979?text=السلام عليكم، أرغب بالاستفسار عن الأعشاب والمنتجات المتوفرة" class="btn-order">استفسر الآن</a>
-    </div>
-
     <div class="payment-section">
         <h4>💳 طرق الدفع المتاحة</h4>
         <div class="payment-grid">
-            <div class="pay-item">
-                <img src="b.jpeg" alt="بنكيلي">
-                <span>بنكيلي</span>
-            </div>
-            <div class="pay-item">
-                <img src="m.png" alt="مصرفي">
-                <span>مصرفي</span>
-            </div>
-            <div class="pay-item">
-                <img src="s.png" alt="سداد">
-                <span>سداد</span>
-            </div>
-            <div class="pay-item">
-                <img src="p.png" alt="بيم بنك">
-                <span>بيم بنك</span>
-            </div>
-            <div class="pay-item">
-                <img src="k.jpeg" alt="كليك">
-                <span>كليك</span>
-            </div>
+            <div class="pay-item"><img src="b.jpeg" alt="بنكيلي"><span>بنكيلي</span></div>
+            <div class="pay-item"><img src="m.png" alt="مصرفي"><span>مصرفي</span></div>
+            <div class="pay-item"><img src="s.png" alt="سداد"><span>سداد</span></div>
+            <div class="pay-item"><img src="p.png" alt="بيم بنك"><span>بيم بنك</span></div>
+            <div class="pay-item"><img src="k.jpeg" alt="كليك"><span>كليك</span></div>
         </div>
-        <small>الدفع على الرقم الموحد:</small>
+        <small>رقم الدفع الموحد:</small>
         <span class="payment-number">42551979</span>
     </div>
 
-    <a href="https://maps.app.goo.gl/Y44565Y4Y5Y4Y4" target="_blank" class="location-section">
+    <a href="https://www.google.com/maps/search/?api=1&query=20.951333,-17.038639" target="_blank" class="location-section">
         <h4>📍 موقعنا في نواذيبو</h4>
         <p class="address-text">
             موريتانيا - نواذيبو <br>
             <strong>كرفور الخامسة - النقطة الساخنة</strong> <br>
             بجوار سوق الهواتف
         </p>
-        <div class="map-hint">اضغط هنا لفتح الموقع على الخريطة 🗺️</div>
+        <div class="map-hint">اضغط هنا لفتح الموقع الدقيق على الخريطة 🗺️</div>
     </a>
 
     <footer>
