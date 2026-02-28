@@ -33,22 +33,41 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            min-height: 100px; /* ضمان مساحة كافية للشعارات */
         }
 
+        /* تنسيق مشترك للشعارين */
         .header-logo {
             position: absolute;
-            top: 5px; 
-            right: 10px;
+            top: 50%; /* لتوسط الشعار عمودياً */
+            transform: translateY(-50%); /* تكملة التوسط العمودي */
             width: 65px; 
             height: 65px;
             border-radius: 10px;
             object-fit: contain;
+            background-color: rgba(255,255,255,0.1); /* خلفية خفيفة للشعار */
+            padding: 2px;
         }
 
-        .hero-title { margin: 0; font-size: 1.6rem; line-height: 1.4; margin-top: 20px; }
+        /* الشعار الأيمن */
+        .logo-right {
+            right: 15px;
+        }
+
+        /* الشعار الأيسر الجديد */
+        .logo-left {
+            left: 15px;
+        }
+
+        .hero-title { 
+            margin: 0; 
+            font-size: 1.5rem; /* تصغير قليل ليتناسب مع وجود شعارين */
+            line-height: 1.4; 
+            max-width: 60%; /* منع النص من الاصطدام بالشعارات */
+        }
 
         .hero-sub { 
-            font-size: 1.4rem; 
+            font-size: 1.3rem; 
             color: var(--gold); 
             font-weight: bold;
             margin-top: 15px;
@@ -127,7 +146,6 @@
 
         .btn-order:hover { background: #1e3d1a; transform: translateY(-2px); }
 
-        /* تنسيق قسم الدفع مع الصور */
         .payment-section {
             background: #fff;
             border-radius: 15px;
@@ -196,12 +214,21 @@
 
         footer { text-align: center; padding: 30px; font-size: 0.9rem; color: #777; border-top: 1px solid #ddd; margin-top: 20px; }
         .dev-name { color: var(--primary); font-weight: bold; text-decoration: none; }
+
+        /* تكييف الهيدر للشاشات الصغيرة جداً */
+        @media (max-width: 400px) {
+            .header-logo { width: 50px; height: 50px; }
+            .hero-title { font-size: 1.2rem; max-width: 70%; }
+            .hero-sub { font-size: 1.1rem; }
+        }
     </style>
 </head>
 <body>
 
 <header>
-    <img src="as.jpeg" alt="شعار مركز الفلسطيني" class="header-logo">
+    <img src="as.jpeg" alt="شعار مركز الفلسطيني يمين" class="header-logo logo-right">
+    <img src="ass.jpeg" alt="شعار مركز الفلسطيني يسار" class="header-logo logo-left">
+    
     <h1 class="hero-title">مركز الفلسطيني للرقية الشرعية والحجامة النبوية 🌿</h1>
     <div class="hero-sub">بإشراف د. جبريل الفلسطيني</div>
 </header>
@@ -275,7 +302,7 @@
         </div>
         <p>تشكيلة مختارة من الأعشاب الطبيعية والزيوت النادرة للشفاء بإذن الله.</p>
         <span class="price-tag">منتجات طبيعية 100%</span>
-                <span class="price-tag">السعر حسب الجلسة</span>
+        <span class="price-tag">السعر حسب الطلب</span>
 
         <a href="https://wa.me/22242551979?text=السلام عليكم، أرغب بالاستفسار عن الأعشاب والمنتجات المتوفرة" class="btn-order">استفسر الآن</a>
     </div>
@@ -308,7 +335,7 @@
         <span class="payment-number">42551979</span>
     </div>
 
-    <a href="https://maps.google.com/?cid=12703449338574403655&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="location-section">
+    <a href="https://maps.app.goo.gl/Y44565Y4Y5Y4Y4" target="_blank" class="location-section">
         <h4>📍 موقعنا في نواذيبو</h4>
         <p class="address-text">
             موريتانيا - نواذيبو <br>
